@@ -2,6 +2,8 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import JSONComp from './components/JSON.vue'
+import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
+
 </script>
 
 <template>
@@ -15,7 +17,8 @@ import JSONComp from './components/JSON.vue'
 
   <main>
     <TheWelcome />
-    <JSONComp />
+    <!-- <JSONComp /> -->
+    <LibraryRegistrationForm />
   </main>
 </template>
 
