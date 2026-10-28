@@ -1,52 +1,51 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import JSONComp from './components/JSON.vue'
-import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
-
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+      <div class="container-fluid">
+        <span class="navbar-brand">Library</span>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+        <div class="navbar-nav">
+          <router-link to="/" class="nav-link">
+            Home
+          </router-link>
 
-  <main>
-    <TheWelcome />
-    <!-- <JSONComp /> -->
-    <LibraryRegistrationForm />
-  </main>
+          <router-link to="/about" class="nav-link">
+            About
+          </router-link>
+
+          <router-link to="/FireLogin" class="nav-link">
+            Firebase Login
+          </router-link>
+
+          <router-link to="/FireRegister" class="nav-link">
+            Firebase Register
+          </router-link>
+
+          <router-link to="/logout" class="nav-link">
+            Log Out
+          </router-link>
+
+          <router-link to="/addbook" class="nav-link">
+            Add Book
+          </router-link>
+
+          <router-link to="/getbookcount" class="nav-link">
+            Get Book Count
+          </router-link>
+
+          <router-link to="/WeatherCheck" class="nav-link">
+            Get Weather
+          </router-link>
+        </div>
+      </div>
+    </nav>
+
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.router-link-active {
+  font-weight: bold;
 }
 </style>
